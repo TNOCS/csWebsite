@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>The Common Sense Framework</title>
+  <meta name="description" content="A framework for easily creating beautiful, collaborative map applications">
+  <meta name="author" content="Arnoud de Jong &amp; Erik Vullings">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/tno.css" id="theme">
+
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+  <script>
+    if (window.location.search.match(/print-pdf/gi)) {
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = 'css/print/pdf.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    }
+  </script>
+
+  <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <section>
+        <h1>The Common Sense Framework</h1>
+        <br />
+        <h3 class="center">The world at your fingertips</h3>
+        <br />
+        <p class="center">
+          <a href="http://nl.linkedin.com/pub/arnoud-de-jong/0/53a/bb3">Arnoud de Jong</a> &amp; <a href="https://www.linkedin.com/in/erikvullings">Erik Vullings</a>
+        </p>
+      </section>
+
+      <section>
+        <h2>Introduction</h2>
+        <ul>
+          <li>Goal
+            <blockquote>
+              <br>“Simple and natural disclosure of information and sensor data to support decision making”
+            </blockquote>
+          </li>
+          <br>
+          <li>What we have
+            <blockquote>
+              <br>“A collection of reusable tools and components for interaction with information, multi-site collaboration and analysis.”
+            </blockquote>
+          </li>
+        </ul>
+
+        <aside class="notes">
+          Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+        </aside>
+      </section>
+
+      <section>
+        <h2>Popular Devices</h2>
+        <img src="img/TouchDevices.png" height='850px'>
+      </section>
+
+      <section>
+        <h2>Safety &amp; Security Applications</h2>
+        <img src="img/MIB.jpg" height='850px'>
+      </section>
+
+      <section>
+        <section>
+          <h2>Innovative Urban Planning</h2>
+          <div class="left">
+            <img src="img/ShowcaseVeiligNederland1.jpg" height='950px'>
+          </div>
+          <div class="right">
+            <ul>
+              <li><b>Customer: </b>City of The Hague</li>
+              <br />
+              <li><b>Goal: </b>Enable domain experts to quickly and collaboratively create a master and safety plan for the city.</li>
+              <br />
+              <li>Experts estimate impact of plans and measures on the city collaboratively based on:
+                <ul>
+                  <li>Quality of life</li>
+                  <li>Economics</li>
+                  <li>Safety &amp; Security</li>
+                  <li>Costs</li>
+                </ul>
+                <br>
+                <li>Combine selected plans &amp; measures to form initial urban development plans</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div class="left">
+            <img src="img/ShowcaseVeiligNederland2.png" height='430px'>
+            <ul>
+              <li>Domain experts collaboratively specify the effects of a potential plan on the area.</li>
+            </ul>
+          </div>
+          <div class="right">
+            <ul>
+              <li>Drag plans (shown in the wheel) to a cluster on the map.</li>
+              <br>
+              <li>The dialog box instantly shows the effect on the criteria based on the expert model.</li>
+              <br>
+            </ul>
+            <img src="img/ShowcaseVeiligNederland3.png">
+          </div>
+        </section>
+      </section>
+
+      <!--iTable-->
+      <section>
+        <section>
+          <h2>iTable</h2>
+          <div class="left">
+            <img src="img/iTable1.jpg">
+            <img src="img/iTable2 - Bomb.png">
+          </div>
+          <div class="right">
+            <ul>
+              <li><b>Customer: </b>National Police (DBB = Service for Protecting People)</li>
+              <br />
+              <li><b>Goal: </b>Increase the quality and effectiveness of security briefings.</li>
+              <br>
+              <ul>
+                <li>Show location in Google Earth or StreetView</li>
+                <br>
+                <li>Analyse field-of-view at position</li>
+                <br>
+                <li>Mark (and collaboratively share) map with points of interest</li>
+              </ul>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Combine top view with 3D view in Google Earth</h2>
+          <img src="img/iTable3 - 3D coupling.png" height="570px">
+        </section>
+
+        <section>
+          <h2>Access traffic cameras</h2>
+          <img src="img/iTable4 - Traffic cameras.png" height="570px">
+        </section>
+
+        <section>
+          <h2>Combine 3D information with CBS statistics</h2>
+          <img src="img/iTable6 - Area with CBS statistics.png" height="570px">
+        </section>
+
+        <section>
+          <h2>Augmented Reality for 3D Situational Awareness</h2>
+          <div>
+            <p>By adding AR markers to the map, we can also inspect the situation in 3D</p>
+            <ul>
+              <li>Left) <a href='http://www.youtube.com/watch?v=bsiHB8AxpqQ&feature=youtu.be'>Real-time flight tracker service</a>
+              </li>
+              <li>Right) <a href='http://www.youtube.com/watch?v=zhnKipiUCJQ&feature=youtu.be'>Amsterdam arena</a>
+              </li>
+            </ul>
+          </div>
+          <div class="left">
+            <img src="img/AR1 - Flight.png" style="margin-top: 50px;">
+          </div>
+          <div class="right">
+            <img src="img/AR2 - Arena.png" style="margin-top: 50px;">
+          </div>
+        </section>
+      </section>
+
+      <!-- TouchMii-->
+      <section>
+        <section>
+          <h2>TouchMii - Combining operations &amp; simulation</h2>
+
+          <div class="left">
+            <img src="img/TouchMii%20-%20VBS2%20units%20on%20map.png">
+            <img src="img/TouchMii%20-%20Exchange%20information%20with%202nd%20line.png">
+          </div>
+
+          <div class="right">
+            <ul>
+              <li><b>Customer:</b> Command and Control (C2) birdtable, Ministry of Defence</li>
+              <br>
+              <li><b>Goal:</b> Increase the quality of strategic and tactical decisions</li>
+              <br>
+              <li>Features:
+                <ul>
+                  <li>Interfaces with VBS2, the serious game used for training, to show the units on a map.</li>
+                  <li>Decision support for commanders</li>
+                  <li>Facilitates interaction with the second line</li>
+                  <li>Youtube <a href="http://youtu.be/Ix2vhcecapo">link 1</a> and <a href="http://www.youtube.com/watch?v=O9H1f0FcHNs">link 2.</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Course of Action support: Weigh alternatives</h2>
+          <img src="img/TouchMii%20-%20Decision%20Support.png">
+        </section>
+
+        <section>
+          <h2>Situational Awareness in VBS2</h2>
+          <div style="position:relative; height:700px;">
+            <img style="position:absolute; top:0; left:0;" height="700px" src="img/TouchMii%20-%20SA2.png">
+            <img style="position:absolute; top:0; left:0;" height="700px" class="fragment" src="img/TouchMii%20-%20SA1.png">
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <h2>Crisis Management Training Suite</h2>
+        <img src="img/Crisis%20Management%20Training%20Suite.png" />
+      </section>
+
+      <section>
+        <h2>Marvel</h2>
+        <div class="left">
+          <ul>
+            <li><b>Customer: </b>Ministery of Defence, Olympics, Health...</li>
+            <br />
+            <li><b>Goal: </b>Develop Expert Models together with clients to estimate the effect of decisions.</li>
+            <br />
+            <li>Based on casual loop diagrams, determine the strength of relations, sign and time delay between different domain concepts to determine the most appropriate course of action.</li>
+          </ul>
+        </div>
+        <img src="img/Marvel.png" style="position: absolute; left: 750px; top: 120px; width: 850px;">
+      </section>
+
+      <section>
+        <h2>UrbanFlood</h2>
+        <ul>
+          <li><b>Customer: </b>Framework Program 7</li>
+          <br>
+          <li><b>Goal: </b>Develop a Surface platform for sensor management during
+            <br>daily operations but also during flooding.</li>
+        </ul>
+        <img src="img/Urban%20Flood%201.png" style="margin-top: 20px; width: 1000px;">
+        <img src="img/Urban%20Flood%202.png" style="position: absolute; width: 500px; left: 1050px; top: -120px;">
+      </section>
+
+      <section>
+        <h2>The Reality Check: Real-time Evacuation Model</h2>
+        <div>
+          <img src="img/RealityCheck1.jpg" style="margin-top: 20px; width: 1000px;">
+          <img src="img/RealityCheck2.jpg" style="position: absolute; width: 500px; left: 1030px; top: 115px;">
+        </div>
+        <ul style="position: absolute; left: 800px; top: 470px; margin-right:-300px; background-color:rgba(255, 255, 255, 0.7); padding: 20px">
+          <li>Increased situation awareness during a crisis</li>
+          <li>Uses ThePopulator&trade; for population data</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>SPARQS <small>(Sensor Planning, Allocation of Resources and Quality of Service)</small></h2>
+        <ul>
+          <li><b>Customer: </b><a href="http://www.starsproject.nl/">STARS project</a>
+          </li>
+          <br>
+          <li><b>Goal: </b>a tool for sensor planning: drag-’n-drop sensors, configure them, analyse field of view. Is used to establish roadmap using CDAG (Concept Development Assessment Game): determine most important sensor features.</li>
+          <br>
+          <li>Using Resource Allocation Algorithms (Matlab)</li>
+        </ul>
+        <img src="img/SPARQS%20-%20SAIL2015.png" style="position: absolute; width: 600px; left: 0px; top: 450px;">
+        <img src="img/SPARQS%20-%20Neercannes.png" style="position: absolute; width: 630px; left: 620px; top: 450px;">
+      </section>
+
+      <section>
+        <div class="left">
+          <img src="img/TnoPresenter1.jpg" alt="">
+          <img src="img/TnoPresenter2.jpg" alt="">
+        </div>
+        <div class="right">
+          <h2>TnoPresenter</h2>
+          <ul>
+            <li><b>Customer: </b>TNO Market &amp; Communications dept.</li>
+            <br>
+            <li><b>Goal: </b>present TNO’s knowledge, product and project portfolio in an interactive way.</li>
+            <br>
+            <li>A multimedia presentation tool to interactively show content.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="left">
+          <img src="img/ieNat1.png">
+          <img src="img/ieNat2.png">
+        </div>
+        <div class="right">
+          <h2>ieNat</h2>
+          <ul>
+            <li>Provide a virtual infrastructure to large scale electric grids:</li>
+            <br>
+            <li>Enables Energy Services by collecting and analysing data from the physical Infrastructure</li>
+            <br>
+            <li>Matlab back-end with load flow solver, State estimation, Data aggregation &amp; sensor placement algorithms</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="left">
+          <img src="img/Waternet1.png" style="height: 250px;">
+          <img src="img/Waternet2.png" style="height: 250px;">
+          <img src="img/Waternet3.png" style="height: 250px;">
+        </div>
+        <div class="right">
+          <h2>EIT Waternet</h2>
+          <ul>
+            <li>Full Water Cycle demonstration</li>
+            <br>
+            <li>3D animations for explanations</li>
+            <br>
+            <li>Real-life data for investigations (vessel tracking, dike monitoring, waterway sensors, bridges, sewers, etc.)</li>
+          </ul>
+          <img src="img/Waternet4.png" style="position: absolute; top: 535px; height: 250px">
+        </div>
+      </section>
+
+      <section>
+        <h2>CareTool</h2>
+        <ul>
+          <li><b>Customer: </b>Ministry of Health (VWS)</li>
+          <br>
+          <li><b>Goal: </b>Gain insight in the position of health care facilities and health regions</li>
+        </ul>
+        <img src="img/CareTool.png" style="margin-top: 20px; width: 1000px;">
+      </section>
+
+      <section>
+        <h2>Commons Sense - for Defence</h2>
+        <ul>
+          <li><b>Customer: </b>Ministry of Defence</li>
+          <br>
+          <li>
+            Common Sense is an integrated C4I demonstrator consisting of:
+            <ul>
+              <li>a smartphone application for dismounted soldiers</li>
+              <li>a command post application on a multi-touch table, tablet or smartphone</li>
+              <li>Features include blue force tracking, drawing, changing and sending waypoints, marking areas or points of interest, (push-to-talk) speech, voice messages, chat, sensing photos, event logging, task lists and context-dependent information transfer</li>
+            </ul>
+          </li>
+        </ul>
+        <img src="img/C4I3.jpg" style="position: absolute; height:350px; left: 10px; top: 470px;">
+        <img src="img/C4I2.jpg" style="position: absolute; height:350px; left: 480px; top: 470px;">
+        <img src="img/C4I1.jpg" style="position: absolute; height:360px; left: 1030px; top: 470px;">
+      </section>
+
+      <section>
+        <h2>Logistic Planning</h2>
+        <ul>
+          <li><b>Customer: </b>Commercial logistic company</li>
+          <br>
+          <li><b>Goal: </b>Develop an intuitive dashboard for planning ship allocation.</li>
+        </ul>
+        <img src="img/LogisticsPlanning.png" style="margin-top: 20px; height: 550px;">
+      </section>
+
+      <section>
+        <h2>SafeMe</h2>
+        <ul>
+          <li>Tool to compare the risk reducing effects of safety measures.</li>
+          <br>
+          <li>Uses open source data (CBS, BAG, risicokaart.nl) with different computational models to compute effects of risk reducing measures.</li>
+        </ul>
+        <img src="img/SafeMe.png" style="margin-top: 20px; height: 550px;">
+      </section>
+
+      <section>
+        <h2>Maritime Situational Awareness</h2>
+        <ul>
+          <li><b>Customer: </b>Ministery of Defence (Royal Navy)</li>
+          <br>
+          <li><b>Goal: </b>Find the best course of action to catch pirates, smugglers &amp; illegal fishers.</li>
+        </ul>
+        <img src="img/MSA.png" style="margin-top: 20px; height: 550px;">
+      </section>
+
+      <section>
+        <h2>The Missing Link</h2>
+        <ul>
+          <li><b>Customer: </b>Ministery of Defence</li>
+          <br>
+          <li><b>Goal: </b>Web application aimed to decrease the gap between operational needs (scenarios) and potential solutions (ideas of systems)</li>
+        </ul>
+        <img src="img/TheMissingLink.png" style="margin-top: 20px; height: 550px;">
+      </section>
+
+      <!--Multi-Purpose Analysis Features-->
+      <section>
+        <section>
+          <h2>Multi-Purpose Analysis Features</h2>
+          <img src="img/Fractal.png" alt="">
+          <p class="center">
+            An overview of several multi-purpose analysis tools.
+          </p>
+        </section>
+
+        <section>
+          <h2>Extract situational information from databases</h2>
+          <img src="img/iTable5 - BAG and CBS integration.png" height="570px">
+        </section>
+
+        <section>
+          <h2>Filter information by location</h2>
+          <img src="img/iTable7 - Reverse CBS lookup.png" height="570px">
+        </section>
+
+        <section>
+          <h2>Role-based Dashboards Views</h2>
+          <img src="img/Dashboards.png" height="570px">
+        </section>
+      </section>
+
+      <!--Technical background-->
+      <section>
+
+        <section>
+          <h2>Technical background</h2>
+          <img src="img/Technical%20background.jpg" height="600px" alt="">
+          <p class="center">Scroll down for more information</p>
+        </section>
+
+        <section>
+          <h2>System Architecture</h2>
+          <img src="img/System%20Architecture.png" />
+        </section>
+
+        <section>
+          <h2>Basic Building blocks</h2>
+          <div>
+            <ul>
+              <li><b>Map component (ESRI)</b>
+                <ul>
+                  <li>Base layers: Google, Bing, Yahoo, ESRI, OSM....</li>
+                  <li>WMS layers: Buienradar, BAG, PDOK, Panoramio…</li>
+                  <li>PostGIS query layers</li>
+                </ul>
+              </li>
+              <br>
+              <li><b>Favorites and Dashboards</b>
+                <br>To return to locations easily, including selected layers.</li>
+              <br>
+              <li><b>Modularity</b>
+                <br>Every application is modular. Using a plugin structure, new tools, map layers, models etc. can be added.</li>
+              <br>
+              <li><b>Multi-touch interaction</b>
+                <br>Support for (multi-)touch as well as mouse interaction on Windows 7 &amp; 8.</li>
+            </ul>
+          </div>
+          <img src="img/Maps.png" style="position: absolute; left: 1150px; top: 10px;">
+          <img src="img/Multi-touch%20interaction.gif" style="position: absolute; left: 1150px; top: 600px;">
+        </section>
+
+        <section>
+          <h2>Basic Building blocks 2</h2>
+          <div>
+            <ul>
+              <li><b>Points of interest layers:</b>
+                <br>Create your own layer definitions in XML
+              </li>
+              <br>
+              <br>
+              <br>
+              <li><b>Time-based events</b>
+                <br>Similar to timeline.js, visualise events on the timeline.</li>
+              <br>
+              <br>
+              <br>
+              <br>
+              <li><b>Presentation of content</b>
+                <br>Show media in a folder structure,push to SecondScreen,
+                <br>share with QR code.
+                <br>Can be linked to a PoI, e.g. floor or security plans of a hotel.</li>
+              <br>
+            </ul>
+          </div>
+          <img src="img/POI%20menu.png" style="position: absolute; left: 750px; top: 10px;">
+          <img src="img/Timeline.png" style="position: absolute; left: 1050px; top: 200px;">
+          <img src="img/Presentation.png" style="position: absolute; left: 1020px; top: 600px;">
+        </section>
+
+        <section>
+          <h2>Interfacing with external applications</h2>
+          <div>
+            <ul>
+              <li><b>Interact with other apps</b>
+                <br>E.g. CommonSense framework, IMB bus, Web Service, Excel...
+                <ul>
+                  <li>VBS2 (Bohemia, Virtual Battle Space 2)</li>
+                  <li>Havok game engine</li>
+                  <li>Google Earth (SecondScreen)</li>
+                  <li>Open Scene Graph (EVE))</li>
+                  <li>Urban Strategy services (air quality, trafic, noise...)</li>
+                  <li>Trackers, Information Fusion, Planners etc...</li>
+                </ul>
+              </li>
+              <br>
+              <li><b>Plugins control</b>
+                <ul>
+                  <li>Turn plugins on/off.</li>
+                  <li>Dynamically load new plugins.</li>
+                  <li>Start other programs.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <img src="img/Plugin%20controls.png" style="position: absolute; left: 900px; top: 450px;">
+          <img src="img/Services.png" style="position: absolute; left: 990px; top: 150px;">
+        </section>
+
+        <section>
+          <h2>Analysis tools</h2>
+          <div>
+            <ul>
+              <li><b>Timeline &amp; player</b>
+                <br>Interactive timeline interface for navigating through time.
+                <br>Sensor data is updated based on focus time.
+              </li>
+              <br>
+              <br>
+              <li><b>Graphs</b>
+                <br>Visualisation of sensor data using interactive graphs
+                <br>that can be annotated.</li>
+              <br>
+              <br>
+              <li><b>Map tools</b>
+                <br>Drawing and annotating on the map, (reverse) geo-referencing,
+                <br>SQL queries, determining distances, line-of-sight, routing</li>
+            </ul>
+          </div>
+          <img src="img/Timeline%20axis.png" style="position: absolute; left: 700px; top: 30px;">
+          <img src="img/Timeline%20player.png" style="position: absolute; left: 860px; top: 180px;">
+          <img src="img/Graphs.png" style="position: absolute; left: 1055px; top: 175px;">
+          <img src="img/Map%20tools.png" style="position: absolute; left: 1055px; top: 500px;">
+        </section>
+
+        <section>
+          <h2>Analysis tools 2</h2>
+          <div>
+            <ul>
+              <li><b>Multi-Criteria Analysis, easy filtering and highlighting</b>
+                <br>A PoI can be filtered, colored or styled based on its properties.
+              </li>
+              <br>
+              <br>
+              <li><b>Intelligent Points of Interest</b>
+                <br>A PoI can be enhanced with its own code, e.g.
+                <br>to draw a zone, show a field-of-view, add an animation...</li>
+              <br>
+              <br>
+              <li><b>Extensive search capabilities</b>
+                <br>Query Google Places, DBPedia, BAG, and more,
+                <br>and add the results to the map</li>
+            </ul>
+          </div>
+          <img src="img/MCA.png" style="position: absolute; left: 960px; top: 0px;">
+          <img src="img/Popups.png" style="position: absolute; left: 1210px; top: 330px;">
+          <img src="img/Search.png" style="position: absolute; left: 790px; top: 550px;">
+        </section>
+
+        <section>
+          <h2>Collaboration and Co-design</h2>
+          <div>
+            <ul>
+              <li><b>Real-time Remote Viewing</b>
+                <br>See who is online, share your view, map and timeline synchronization, sharing of photo’s, video’s, map layers.
+              </li>
+              <br>
+              <br>
+              <li><b>Remote Editing</b>
+                <br>Share and annotate collaboratively.
+              </li>
+              <br>
+              <br>
+              <li><b>Working together</b>
+                <br>Chat with co-workers, teleconferencing, email, chat (voxer), twitter...
+              </li>
+              <br>
+              <!--
+              <li><b></b>
+                <br>
+              </li>
+              <br>
+-->
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Interface with models and simulations</h2>
+          <div>
+            <ul>
+              <li><b>Existing models</b>
+                <br>Traffic management, Noise management, air quality, quality of life, ground water, durability, external safety, costs, impact of explosions, Building Information Models,
+                <br>Field of View
+              </li>
+              <br>
+              <br>
+              <li><b>Existing simulations</b>
+                <br>Marine traffic, weather and wind, flooding, evacuation, oil spills,
+                <br>traffic jams &amp; intelligent traffic systems
+              </li>
+            </ul>
+          </div>
+          <img src="img/Existing%20models.png" style="position: absolute; left: 1300px; top: 0px;">
+          <img src="img/Urban%20Strategy%20Viewer.jpg" style="position: absolute; height:350px; left: 1050px; top: 450px;">
+        </section>
+
+        <section>
+          <h2>Coupling with external devices</h2>
+          <div>
+            <ul>
+              <li><b>SecondScreen</b>
+                <br>Google Earth, StreetView, photo’s, timeline, video, websites, presentations
+              </li>
+              <br>
+              <br>
+              <li><b>SmartPhone</b>
+                <br>Exchange live GPS position (blue force tracking), media,
+                <br>live streaming of camera image
+              </li>
+              <br>
+              <br>
+              <li><b>Gestures &amp; voice interaction</b>
+                <br>Using Kinect to control applications
+                <br>via voice or gesture.
+              </li>
+            </ul>
+          </div>
+          <img src="img/SecondScreen.jpg" style="position: absolute; left: 1150px; top: 0px;">
+          <img src="img/SmartPhone.jpg" style="position: absolute; left: 1150px; top: 300px;">
+          <img src="img/Kinect1.jpg" style="position: absolute; left: 1150px; top: 550px;">
+          <img src="img/Kinect2.jpg" style="position: absolute; left: 750px; top: 550px;">
+        </section>
+
+        <section>
+          <h2>And many more...</h2>
+          <ul>
+            <li>CCTV integration</li>
+            <li>Live TV streams</li>
+            <li>Interfacing with simulation standardssuch as DIS and HLA</li>
+            <li>Active tangibles</li>
+            <li>Social Media integration</li>
+            <li>VNC coupling</li>
+            <li>Conference call / SMS</li>
+          </ul>
+          <img src="img/TV%20stream.png" style="position: absolute; left: 1000px; top: 0px; width:500px;">
+          <img src="img/Explosion%20effects.png" style="position: absolute; left: 1000px; top: 400px; width:500px;">
+        </section>
+
+      </section>
+
+      <section>
+        <h2>Want to know more...?</h2>
+        <p>Contact us at <a href="wwww.tno.nl">tno.nl</a>
+        </p>
+        <ul>
+          <li><b><a href="http://nl.linkedin.com/pub/arnoud-de-jong/0/53a/bb3">Arnoud de Jong, MA</a></b> (arnoud dot dejong at tno dot nl)
+            <br><i>Specialisation:</i> SmartPhones and Natural User Interfaces
+          </li>
+          <br>
+          <li><b><a href="http://nl.linkedin.com/pub/jeroen-broekhuijsen/2/a10/23a">Jeroen Broekhuijsen, MA</a></b> (jeroen dot broekhuijsen at tno dot nl)
+            <br><i>Specialisation:</i> Water and energy domain
+          </li>
+          <br>
+          <li><b><a href="https://www.linkedin.com/in/erikvullings">Erik Vullings, PhD, MSc</a></b> (erik dot vullings at tno dot nl, +31-6-302 45 272)
+            <br><i>Specialisation:</i> Modelling and Simulations
+          </li>
+          <br>
+        </ul>
+      </section>
+
+    </div>
+
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.min.js"></script>
+
+  <script>
+    // Full list of configuration options available here:
+     // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: false,
+      margin: 0.31,
+      width: 1280,
+
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+      // Parallax scrolling
+      // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+      // parallaxBackgroundSize: '2100px 900px',
+      leap: {
+        naturalSwipe: true, // Do not invert swipe gestures
+        pointerOpacity: 0.5, // Set pointer opacity to 0.5
+        pointerColor: '#d80000' // Red pointer
+      },
+
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+        {
+          src: 'lib/js/classList.js',
+          condition: function () {
+            return !document.body.classList;
+          }
+        },
+        {
+          src: 'plugin/markdown/marked.js',
+          condition: function () {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: 'plugin/markdown/markdown.js',
+          condition: function () {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: 'plugin/highlight/highlight.js',
+          async: true,
+          callback: function () {
+            hljs.initHighlightingOnLoad();
+          }
+        },
+        {
+          src: 'plugin/zoom-js/zoom.js',
+          async: true,
+          condition: function () {
+            return !!document.body.classList;
+          }
+        },
+        {
+          src: 'plugin/notes/notes.js',
+          async: true,
+          condition: function () {
+            return !!document.body.classList;
+          }
+        },
+        {
+          src: 'plugin/math/math.js',
+          async: true
+        },
+        {
+          src: 'plugin/leap/leap.js',
+          async: true
+        }
+        ]
+    });
+  </script>
+
+</body>
+
+</html>
